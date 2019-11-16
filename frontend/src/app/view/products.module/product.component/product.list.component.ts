@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {IProduct} from "@common/api/IProduct";
+import {Product} from "@common/api/Product";
 import {ProductBasket} from "@service/ProductBasket";
 
 @Component({
@@ -7,7 +7,7 @@ import {ProductBasket} from "@service/ProductBasket";
     styleUrls: ['product.list.component.scss'],
 })
 export class ProductListComponent implements OnInit{
-    private productList: IProduct[];
+    private productList: Product[];
     private basket: ProductBasket;
     ngOnInit(): void {
         this.productList = [
@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit{
         this.basket = new ProductBasket(null);
 
     }
-    private add2basket(product: IProduct){
+    private add2basket(product: Product){
         
         this.basket.Add({id: product.id, title: product.title, description: product.description, count: 1});
     }
