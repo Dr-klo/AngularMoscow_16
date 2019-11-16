@@ -1,0 +1,9 @@
+node_modules/
+allure-results/
+out
+docs/
+package-lock.json
+log/
+tests-definition.html
+tests-report.xml
+.idea

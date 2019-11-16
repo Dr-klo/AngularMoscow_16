@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "commonjs",
+        "outDir": "./out",
+        "sourceMap": true,
+        "baseUrl": ".",
+        "rootDirs": [
+            "./src",
+            "../Contracts/src",
+            "../ModuleA/src"
+        ],
+        "paths": {
+            "@common/*" : ["../Contracts/src/*"],
+            "@module/*" : ["../ModuleA/src/*"]
+        }
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+
+    "exclude": [
+        "node_modules"
+    ]
+}

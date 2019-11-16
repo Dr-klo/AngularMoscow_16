@@ -1,0 +1,38 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of productList">
+
+    <h3>
+        <a [title]="product.title + ' details'">
+            {{ product.title }}
+        </a>
+    </h3>
+
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+    </p>
+
+    <button mat-button (click)="add2basket(product)">
+        To Basket
+    </button>
+
+</div>
+
+
+<h2>Busket</h2>
+
+
+<div *ngFor="let product of basket.getList()">
+
+    <h3>
+        <a [title]="product.title + ' details'">
+            {{ product.title }}
+        </a>
+    </h3>
+    <p>{{product.description}}</p>
+    <p>{{product.count}}</p>
+    <button mat-button (click)="removeFromBasket(product.id)">
+        Remove
+    </button>
+
+</div>

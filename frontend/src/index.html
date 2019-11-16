@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="Anduler #16 Modules example" name="description">
+    <title>Angular #16 Modules example</title>
+    <script>
+        // polyfills
+
+        // IE matches
+
+        ;(function(e) {
+            var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
+            !matches ? (e.matches = e.matchesSelector = function matches(selector) {
+                var matches = document.querySelectorAll(selector);
+                var th = this;
+                return Array.prototype.some.call(matches, function(e) {
+                    return e === th;
+                });
+            }) : (e.matches = e.matchesSelector = matches);
+        })(Element.prototype);
+
+        // IE closest
+
+        (function(e){
+            e.closest = e.closest || function(css){
+                var node = this;
+
+                while (node) {
+                    if (node.matches(css)) return node;
+                    else node = node.parentElement;
+                }
+                return null;
+            }
+        })(Element.prototype);
+    </script>
+    <script>
+        var global = global || window;
+        // var Buffer = Buffer || [];
+        var process = process || {
+            env: { DEBUG: undefined },
+            version: []
+        };
+
+        // IE matches
+
+        ;(function(e) {
+            var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
+            !matches ? (e.matches = e.matchesSelector = function matches(selector) {
+                var matches = document.querySelectorAll(selector);
+                var th = this;
+                return Array.prototype.some.call(matches, function(e) {
+                    return e === th;
+                });
+            }) : (e.matches = e.matchesSelector = matches);
+        })(Element.prototype);
+
+        // IE closest
+
+        (function(e){
+            e.closest = e.closest || function(css){
+                var node = this;
+
+                while (node) {
+                    if (node.matches(css)) return node;
+                    else node = node.parentElement;
+                }
+                return null;
+            }
+        })(Element.prototype);
+    </script>
+</head>
+<body class="mat-app-background basic-container">
+<script>
+    window.__theme = 'bs4';
+</script>
+</body>
+
+</html>
